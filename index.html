@@ -5,50 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Institution 2 | Skills for the Real World</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav>
         <div class="logo">
             <img src="logo.png" alt="Logo">
-            <strong>Institution</strong> 2
+            <span><strong>Institution</strong> 2</span>
         </div>
         <ul>
             <li><a href="#what-we-do">What We Do</a></li>
+            <li><a href="resources.html">Resources</a></li>
             <li><a href="#about">About Us</a></li>
             <li><a href="https://www.buymeacoffee.com/" target="_blank" class="btn-donate">Donate ❤️</a></li>
         </ul>
     </nav>
 
     <header class="hero">
-        <div class="hero-content">
-            <h1>Thrive in the actual world.</h1>
-            <p>Free resources on the skills school usually skips — from Python to Money Skills.</p>
-            <a href="#what-we-do" class="btn-main">Explore Resources</a>
+        <div class="slider-container">
+            <div class="slide active">
+                <h1>Thrive in the actual world.</h1>
+                <p>Free resources on the skills school usually skips.</p>
+                <a href="#what-we-do" class="btn-main">Get Started</a>
+            </div>
+            <div class="slide">
+                <h1>Python & AI Basics</h1>
+                <p>Master the tools of the future with Gabriella's guides.</p>
+                <a href="resources.html" class="btn-main">View Projects</a>
+            </div>
+            <div class="slide">
+                <h1>Money & Mindset</h1>
+                <p>Abby's condensed info cards for real-world wealth.</p>
+                <a href="resources.html" class="btn-main">Read Summaries</a>
+            </div>
         </div>
     </header>
 
     <section id="what-we-do" class="container">
         <h2 class="section-title">What We Do</h2>
-        <p class="subtitle">We create free resources on topics school usually skips:</p>
-        
         <div class="grid">
             <div class="card">
                 <h3>🐍 Python</h3>
-                <p>Beginner basics to fun, real-world projects.</p>
+                <p>Beginner coding to fun, practical projects.</p>
+                <a href="resources.html" class="learn-more">Learn more →</a>
             </div>
             <div class="card">
                 <h3>🤖 AI Basics</h3>
-                <p>What it is and how to use it to your advantage.</p>
+                <p>Learn how to use AI to your advantage.</p>
+                <a href="resources.html" class="learn-more">Learn more →</a>
             </div>
             <div class="card">
                 <h3>💰 Money Skills</h3>
-                <p>Financial literacy and condensed book info cards.</p>
+                <p>Financial literacy and book summaries.</p>
+                <a href="resources.html" class="learn-more">Learn more →</a>
             </div>
             <div class="card">
                 <h3>🧠 Life Skills</h3>
-                <p>Time management, mindset, and communication.</p>
+                <p>Mindset, communication, and time management.</p>
+                <a href="resources.html" class="learn-more">Learn more →</a>
             </div>
         </div>
     </section>
@@ -56,9 +71,39 @@
     <section id="about" class="bg-light">
         <div class="container">
             <h2>About Us</h2>
-            <p>Hi! We’re <strong>Gabriella and Abby Li</strong>, two students from Hong Kong. We started <strong>Institution 2</strong> together because we realised that school wasn’t enough. We want to help you feel ready for life — not just pass exams.</p>
-            
+            <p>We are <strong>Gabriella and Abby Li</strong>. We believe learning should spark excitement and help you feel ready for life—not just pass exams.</p>
             <div class="roles-grid">
                 <div class="role-box">
                     <h4>Gabriella</h4>
-                    <p>The Tech Lead: Building the website, coding features, and making things run.</p>
+                    <p>Tech Lead: Website architecture and coding features.</p>
+                </div>
+                <div class="role-box">
+                    <h4>Abby</h4>
+                    <p>Creative Lead: Writing, design, and user experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Support Institution 2</h3>
+            <a href="https://www.buymeacoffee.com/" target="_blank" class="btn-donate">Buy us a coffee ☕</a>
+            <p style="margin-top: 40px; opacity: 0.6;">© 2026 Institution 2 | Hong Kong</p>
+            <a href="admin.html" class="admin-link">Admin Dashboard</a>
+        </div>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        function showNextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+        setInterval(showNextSlide, 4000);
+    </script>
+
+</body>
+</html>
