@@ -84,3 +84,42 @@ footer h3 { color: white; margin-bottom: 10px; }
 .learn-more:hover {
     text-decoration: underline;
 }
+/* --- RESPONSIVE DESIGN (Media Queries) --- */
+
+/* For Tablets and Smaller Laptops (under 1024px wide) */
+@media (max-width: 1024px) {
+    .hero h1 { font-size: 2.8rem; }
+    .container { padding: 60px 5%; }
+}
+
+/* For Mobile Phones (under 768px wide) */
+@media (max-width: 768px) {
+    /* 1. Make the Hero text smaller so it fits */
+    .hero h1 { font-size: 2rem; }
+    .hero p { font-size: 1rem; }
+
+    /* 2. Stack the About Us boxes vertically instead of side-by-side */
+    .roles-grid {
+        flex-direction: column; 
+        gap: 20px;
+    }
+
+    /* 3. Adjust the Navigation for small screens */
+    nav {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    nav ul {
+        margin-top: 15px;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    /* 4. Make the Logo smaller on phones */
+    .logo { font-size: 1.2rem; }
+    .logo img { height: 30px; }
+}
