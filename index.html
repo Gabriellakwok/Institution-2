@@ -29,26 +29,31 @@
     <header class="hero">
         <div class="slider-container">
             <div class="slide active">
-                <h1>Thrive in the actual world.</h1>
-                <p>Free resources on the skills school usually skips.</p>
-                <a href="#resources" class="btn-main">Get Started</a>
+                <div class="hero-content">
+                    <h1>Thrive in the actual world.</h1>
+                    <p>Free resources on the skills school usually skips.</p>
+                    <a href="#resources" class="btn-main">Get Started</a>
+                </div>
             </div>
             <div class="slide">
-                <h1>Python & AI Basics</h1>
-                <p>Master the tools of the future with Gabriella's guides.</p>
+                <div class="hero-content">
+                    <h1>Python & AI Basics</h1>
+                    <p>Master the tools of the future with Gabriella's guides.</p>
+                    <a href="#resources" class="btn-main">Explore AI</a>
+                </div>
             </div>
         </div>
     </header>
 
     <section id="resources" class="container">
         <h2 class="section-title">Resource Library</h2>
-        <p>We keep all our guides, code, and summaries in one place for you to download.</p>
+        <p>Access our curated guides and summaries instantly.</p>
         
         <div class="grid">
             <div class="card" style="text-align: center; grid-column: 1 / -1;">
-                <h3>📁 Open the Full Library</h3>
-                <p>Click below to access our Google Drive folder containing all Python, AI, and Money resources.</p>
-                <a href="https://drive.google.com/drive/folders/1WkXezBn5tNxGxaE5vEpLxqZ2lxCy0KkI?usp=share_link" target="_blank" class="btn-main">Browse & Download Files →</a>
+                <h3>📁 Our Public Folder</h3>
+                <p>Click below to access our Google Drive folder for all Python, AI, and Money resources.</p>
+                <a href="https://drive.google.com/drive/folders/1WkXezBn5tNxGxaE5vEpLxqZ2lxCy0KkI?usp=share_link" target="_blank" class="btn-main">Open Library →</a>
             </div>
         </div>
     </section>
@@ -56,25 +61,22 @@
     <section id="about" class="bg-light">
         <div class="container">
             <h2>About Us</h2>
-            <p>We are <strong>Gabriella and Abby Kwok</strong>. We believe learning should spark excitement and help you feel ready for life.</p>
             <div class="roles-grid">
                 <div class="role-box">
                     <h4>Gabriella</h4>
-                    <p>Tech Lead: Website architecture and coding features.</p>
+                    <p>Tech Lead: Building features and global scaling.</p>
                 </div>
                 <div class="role-box">
                     <h4>Abby</h4>
-                    <p>Creative Lead: Writing, design, and user experience.</p>
+                    <p>Creative Lead: Content design and user experience.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="footer-content">
-            <p>© 2026 Institution 2 | Hong Kong</p>
-            <a href="admin.html" class="admin-link">Admin Dashboard</a>
-        </div>
+        <p>© 2026 Institution 2 | Hong Kong</p>
+        <a href="admin.html" class="admin-link">Admin Dashboard</a>
     </footer>
 
     <script>
@@ -87,7 +89,7 @@
                 slides[currentSlide].classList.add('active');
             }
         }
-        setInterval(showNextSlide, 4000);
+        setInterval(showNextSlide, 5000);
     </script>
 
 </body>
