@@ -4,14 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Institution 2 | Admin Panel</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; background: #f0f2f5; }
-        .login-card { background: white; padding: 40px; border-radius: 24px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); text-align: center; width: 90%; max-width: 400px; }
-        input { width: 100%; padding: 14px; margin: 20px 0; border: 2px solid #eee; border-radius: 12px; font-size: 1rem; box-sizing: border-box; transition: 0.3s; }
-        input:focus { border-color: #00b894; outline: none; }
-        button { background: #00b894; color: white; border: none; padding: 14px; border-radius: 12px; font-weight: bold; cursor: pointer; width: 100%; font-size: 1rem; transition: 0.3s; }
-        button:hover { background: #009475; transform: translateY(-2px); }
+        body { font-family: sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; background: #f0f2f5; }
+        .login-card { background: white; padding: 40px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; width: 90%; max-width: 400px; }
+        input { width: 100%; padding: 14px; margin: 20px 0; border: 2px solid #eee; border-radius: 12px; font-size: 1rem; }
+        button { background: #00b894; color: white; border: none; padding: 14px; border-radius: 12px; font-weight: bold; cursor: pointer; width: 100%; }
         #admin-content { display: none; } 
         .admin-btn { display: block; margin: 15px 0; padding: 15px; background: #6c5ce7; color: white; text-decoration: none; border-radius: 12px; font-weight: bold; }
         .secondary { background: #2d3436; }
@@ -20,38 +17,26 @@
 <body>
 
     <div id="login-form" class="login-card">
-        <h2 style="margin-top:0;">Admin Access</h2>
-        <p style="color: #636e72;">Please enter your secret credentials.</p>
-        <input type="password" id="pass-input" placeholder="Password" autofocus>
+        <h2>Admin Access</h2>
+        <input type="password" id="pass-input" placeholder="Enter Secret Password" autofocus>
         <button type="button" onclick="checkPassword()">Login</button>
     </div>
 
     <div id="admin-content" class="login-card">
-        <h1 style="color: #00b894; margin-top:0;">Access Granted</h1>
-        <hr style="border:0; border-top:1px solid #eee; margin: 20px 0;">
-        <a href="https://github.com/Gabriellakwok/institution-2/upload/main" target="_blank" class="admin-btn">📤 Upload New Files</a>
-        <a href="https://github.com/Gabriellakwok/institution-2/edit/main/index.html" target="_blank" class="admin-btn secondary">📝 Edit Homepage</a>
-        <a href="index.html" style="display:block; margin-top:20px; color:#b2bec3; text-decoration:none;">← Back to Home</a>
+        <h1>Welcome, Gabriella</h1>
+        <p>Manage your International Site:</p>
+        <a href="https://github.com/Gabriellakwok/institution-2/edit/main/index.html" target="_blank" class="admin-btn">📝 Edit Website Code</a>
+        <a href="https://drive.google.com/drive/folders/1WkXezBn5tNxGxaE5vEpLxqZ2lxCy0KkI" target="_blank" class="admin-btn secondary">📂 Manage Google Drive Files</a>
+        <a href="index.html" style="display:block; margin-top:20px; color:#b2bec3; text-decoration:none;">← Back Home</a>
     </div>
 
     <script>
         function checkPassword() {
-            const passInput = document.getElementById('pass-input');
-            const password = passInput.value;
-
-            // Password is now 'mushroom'
-            if (password === "mushroom") {
+            if (document.getElementById('pass-input').value === "mushroom") {
                 document.getElementById('login-form').style.display = 'none';
                 document.getElementById('admin-content').style.display = 'block';
-            } else {
-                alert("Access Denied: Incorrect Password.");
-                passInput.value = ""; 
-            }
+            } else { alert("Incorrect!"); }
         }
-
-        document.getElementById('pass-input').addEventListener('keypress', function (e) {
-            if (e.key === 'Enter') { checkPassword(); }
-        });
     </script>
 </body>
 </html>
